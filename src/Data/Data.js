@@ -1,7 +1,7 @@
 export const card = [
     {
         id: 1,
-        image: './src/assets/tech/5.jpg',
+        image: '/assets/tech/5.jpg',
         name: 'Axious Lightning 2017',
         desc: 'Wireless Stereo Headset',
         category: 'electronics',
@@ -12,7 +12,7 @@ export const card = [
     },
     {
         id: 2,
-        image: './src/assets/clothes/5.jpg',
+        image: '/assets/clothes/5.jpg',
         name: 'Sky-Blue Turkish Jeans',
         desc: '3-pair high quality jeans',
         category: 'clothes',
@@ -23,7 +23,7 @@ export const card = [
     },
     {
         id: 3,
-        image: './src/assets/cosmetics/2.jpg',
+        image: '/assets/cosmetics/2.jpg',
         name: 'Derma Science',
         desc: 'Sensitive Skin Sun Block Forever +',
         category: 'cosmetics',
@@ -34,7 +34,7 @@ export const card = [
     },
     {
         id: 4,
-        image: './src/assets/clothes/3.jpg',
+        image: '/assets/clothes/3.jpg',
         name: 'Swedish Winter Sweater',
         desc: 'Soft Cotton Sweater',
         category: 'clothes',
@@ -45,7 +45,7 @@ export const card = [
     },
     {
         id: 5,
-        image: './src/assets/shoes/3.jpg',
+        image: '/assets/shoes/3.jpg',
         name: 'Shady-Green Heals',
         desc: 'For Classy Women',
         category: 'shoes',
@@ -56,7 +56,7 @@ export const card = [
     },
     {
         id: 6,
-        image: './src/assets/games/6.jpg',
+        image: '/assets/games/6.jpg',
         name: 'Microsoft X-Box-1 2016',
         desc: 'Wired 2-pair game pad',
         category: 'games',
@@ -67,7 +67,7 @@ export const card = [
     },
     {
         id: 7,
-        image: './src/assets/furnitures/3.jpg',
+        image: '/assets/furnitures/3.jpg',
         name: 'Belgium Bow Chairs',
         desc: '2-pair hard wood furnitures',
         category: 'furniture',
@@ -78,7 +78,7 @@ export const card = [
     },
     {
         id: 8,
-        image: './src/assets/toys/8.jpg',
+        image: '/assets/toys/8.jpg',
         name: 'Lego City Set',
         desc: 'For The Children',
         category: 'toys',
@@ -89,7 +89,7 @@ export const card = [
     },
     {
         id: 9,
-        image: './src/assets/games/2.jpg',
+        image: '/assets/games/2.jpg',
         name: 'Pac-Man & Classic Games',
         desc: "The Best Of The '90s",
         category: 'games',
@@ -100,7 +100,7 @@ export const card = [
     },
     {
         id: 10,
-        image: './src/assets/tech/32.jpg',
+        image: '/assets/tech/32.jpg',
         name: 'E-mount Alpha 7th edition',
         desc: "35mm Full-Frame Cmos Image Sensor",
         category: 'electronics',
@@ -111,7 +111,7 @@ export const card = [
     },
     {
         id: 11,
-        image: './src/assets/tech/30.jpg',
+        image: '/assets/tech/30.jpg',
         name: 'Apple Air-Pod 1',
         desc: "White Pods With Red Pouch",
         category: 'electronics',
@@ -122,7 +122,7 @@ export const card = [
     },
     {
         id: 12,
-        image: './src/assets/shoes/5.jpg',
+        image: '/assets/shoes/5.jpg',
         name: "Nike Airforce '23",
         desc: "Silky Leather Textured Sneakers",
         category: 'shoes',
@@ -133,7 +133,7 @@ export const card = [
     },
     {
         id: 13,
-        image: './src/assets/cosmetics/4.jpg',
+        image: '/assets/cosmetics/4.jpg',
         name: "El Kremi",
         desc: "Konsantre Formul",
         category: 'cosmetics',
@@ -147,7 +147,7 @@ export const card = [
 export const cardTwo = [
     {
         id: 1,
-        image: './src/assets/watches/3.jpg',
+        image: '/assets/watches/3.jpg',
         name: 'Apple Smart watch',
         desc: '2017 Edition Mixed Color',
         rating: 5,
@@ -157,7 +157,7 @@ export const cardTwo = [
     },
     {
         id: 2,
-        image: './src/assets/furnitures/4.jpg',
+        image: '/assets/furnitures/4.jpg',
         name: 'Bare Back Couchine',
         desc: 'German Bare Back',
         rating: 4,
@@ -167,7 +167,7 @@ export const cardTwo = [
     },
     {
         id: 3,
-        image: './src/assets/shoes/13.jpg',
+        image: '/assets/shoes/13.jpg',
         name: 'Air Force 1',
         desc: 'Nike Classic White Sneakers',
         rating: 4,
@@ -177,7 +177,7 @@ export const cardTwo = [
     },
     {
         id: 4,
-        image: './src/assets/games/4.jpg',
+        image: '/assets/games/4.jpg',
         name: 'Play Station 4 Pads',
         desc: 'Wireless 2-set Game Pad',
         rating: 5,
@@ -187,7 +187,7 @@ export const cardTwo = [
     },
     {
         id: 5,
-        image: './src/assets/games/8.jpg',
+        image: '/assets/games/8.jpg',
         name: 'Lawn Tennis Racket',
         desc: 'With A Tennis Ball & Net',
         rating: 4,
@@ -197,7 +197,7 @@ export const cardTwo = [
     },
     {
         id: 6,
-        image: './src/assets/jewelries/1.jpg',
+        image: '/assets/jewelries/1.jpg',
         name: 'Leila Sterling Rose',
         desc: 'Engagement Ring 8',
         rating: 5,
@@ -207,7 +207,7 @@ export const cardTwo = [
     },
     {
         id: 7,
-        image: './src/assets/bags/1.jpg',
+        image: '/assets/bags/1.jpg',
         name: 'Jacquemus Mini-Bag',
         desc: "Black Mini-Bag '19 Collection",
         rating: 5,
@@ -217,7 +217,7 @@ export const cardTwo = [
     },
     {
         id: 8,
-        image: './src/assets/furnitures/11.jpg',
+        image: '/assets/furnitures/11.jpg',
         name: 'Diamond Steel Lamp',
         desc: 'With CFL Bulb',
         rating: 5,
