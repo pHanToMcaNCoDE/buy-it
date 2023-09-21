@@ -1,5 +1,5 @@
 import React from 'react'
-import img from '../../assets/furnitures/3.jpg'
+import img from '../../../public/assets/furnitures/3.jpg'
 import {AiOutlineStar} from 'react-icons/ai'
 import {RiHeart2Line} from 'react-icons/ri'
 import {AiOutlineEye} from 'react-icons/ai'

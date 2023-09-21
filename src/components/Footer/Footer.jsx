@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../../assets/logo2.png'
+import logo from '../../../public/assets/logo2.png'
 import {AiOutlineInstagram, AiOutlineTwitter} from 'react-icons/ai'
 import {SlSocialFacebook, SlSocialLinkedin} from 'react-icons/sl'
 

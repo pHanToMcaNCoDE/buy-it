@@ -1,7 +1,7 @@
 import React from 'react'
-import ads from '../../assets/ads3.jpg'
-import adsTwo from '../../assets/ads11.jpg'
-import adsThree from '../../assets/ads7.jpg'
+import ads from '../../../public/assets/ads3.jpg'
+import adsTwo from '../../../public/assets/ads11.jpg'
+import adsThree from '../../../public/assets/ads7.jpg'
 
 const New = () => {
   return (

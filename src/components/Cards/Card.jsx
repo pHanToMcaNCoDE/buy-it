@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import tech from '../../assets/tech/5.jpg'
+// import tech from '../../../public/assets/tech/5.jpg'
 import {RiHeart2Line} from 'react-icons/ri'
 import {AiOutlineStar} from 'react-icons/ai'
 import {LuFilter} from 'react-icons/lu'

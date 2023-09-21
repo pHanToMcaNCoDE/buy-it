@@ -1,5 +1,5 @@
 import React from 'react'
-import ad from '../../assets/ads.jpg'
+import ad from '../../../public/assets/ads.jpg'
 
 const Hero = () => {
   return (

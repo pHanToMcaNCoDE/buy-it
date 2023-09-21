@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import logo from '../../assets/logo.png'
+import logo from '../../../public/assets/logo.png'
 import {RxHamburgerMenu} from 'react-icons/rx'
 import {MdOutlineCancelPresentation, MdOutlineDeliveryDining} from 'react-icons/md'
 import {AiOutlineSearch, AiOutlineQuestion, AiOutlinePhone} from 'react-icons/ai'
