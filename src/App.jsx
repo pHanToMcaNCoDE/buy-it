@@ -1,5 +1,4 @@
-import { useState } from 'react'
-import { BiNews } from 'react-icons/bi'
+import { ToastContainer } from 'react-toastify'
 import Ads from './components/Ads/Ads'
 import Card from './components/Cards/Card'
 import Categories from './components/Categories/Categories'
@@ -10,10 +9,10 @@ import New from './components/New/New'
 import Services from './components/Services/Services'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
+      <ToastContainer/>
       <Navbar/>
       <Hero/>
       <Card/>

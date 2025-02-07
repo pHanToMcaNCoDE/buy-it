@@ -9,10 +9,20 @@ import {FaRegHandshake} from 'react-icons/fa'
 import {HiOutlineLocationMarker} from 'react-icons/hi'
 import {IoIosArrowDown} from 'react-icons/io'
 import {RiHeart2Line} from 'react-icons/ri'
+import Cart from '../cart/Cart'
+import { useSelector } from 'react-redux'
+import Favourite from '../Favourite/Favourite'
+
+
 
 const Navbar = () => {
-const [nav, setNav] = useState(false)
+    const [nav, setNav] = useState(false)
+    const [isClicked, setIsClicked] = useState(false)
+    const [favouriteClicked, setFavouriteClicked] = useState(false)
 
+    const cartCount = useSelector(state => state.cart.cartList.length)
+
+    const favouriteCount = useSelector(state => state.cart.favouriteList.length)
 
 
   return (
@@ -31,7 +41,7 @@ const [nav, setNav] = useState(false)
 
         {/* Handburger Menu */}
 
-        <div>
+        <div className='flex lg:hidden'>
             <RxHamburgerMenu className='cursor-pointer mr-2 lg:my-2 lg:mx-2' onClick={() => setNav(!nav)} size={23} />
         </div>
 
@@ -40,7 +50,7 @@ const [nav, setNav] = useState(false)
 
             <li className='flex items-center mr-6 text-[.8rem] text-gray-700 cursor-pointer hover:text-purple-600'><AiOutlinePhone size={23} className='mr-2'/>+012345678910</li>
 
-            <li className='flex items-center mr-6 text-[.8rem] text-gray-700 cursor-pointer hover:text-purple-600'><HiOutlineLocationMarker size={23} className='mr-2'/>Location<IoIosArrowDown size={15} className='mr-2 ml-1'/></li>
+            {/* <li className='flex items-center mr-6 text-[.8rem] text-gray-700 cursor-pointer hover:text-purple-600'><HiOutlineLocationMarker size={23} className='mr-2'/>Location<IoIosArrowDown size={15} className='mr-2 ml-1'/></li> */}
 
             <li className='flex items-center mr-6 text-[.8rem] text-gray-700 cursor-pointer hover:text-purple-600'><BsGlobeAmericas size={23} className='mr-2'/>ENG<IoIosArrowDown size={15} className='mr-2 ml-1'/></li>
 
@@ -85,9 +95,30 @@ const [nav, setNav] = useState(false)
         {/* Other Links */}
 
         <ul className='font-mono flex items-center'>
-            <li className='text-[1rem] md:text-[1.1rem] text-gray-700 mr-2 md:mr-4 flex items-center cursor-pointer hover:text-purple-600'><BiUserCheck size={21} className='mr-2'/>Account</li>
+            <div className='relative'>
+                <div className='absolute top-[-5px] right-[5px] w-[10px] h-[10px] text-white rounded-full p-3 bg-red-500 flex justify-center items-center'>
+                    {favouriteCount}
+                </div>
+                <li onClick={() => setFavouriteClicked((prev) => !prev)} className='text-[1rem] md:text-[1.1rem] text-gray-700 mr-2 md:mr-4 flex items-center cursor-pointer hover:text-purple-600'><RiHeart2Line size={28} className='mr-2'/></li>
+            </div>
+            
+            
+            <li className='text-[1rem] md:text-[1.1rem] text-gray-700 mr-2 md:mr-4 flex items-center cursor-pointer hover:text-purple-600'><BiUserCheck size={28} className='mr-2'/>Account</li>
 
-            <li className='text-[1.1rem] text-gray-700 mr-4 flex items-center cursor-pointer hover:text-purple-600'><BiCartDownload size={21} className='mr-2'/>Cart</li>
+            <div className='relative'>
+                <div className='absolute top-[-5px] right-[5px] w-[10px] h-[10px] text-white rounded-full p-3 bg-red-500 flex justify-center items-center'>
+                    {cartCount}
+                </div>
+                <li onClick={() => setIsClicked((prev) => !prev)} className='text-[1.1rem] text-gray-700 mr-4 flex items-center cursor-pointer hover:text-purple-600'><BiCartDownload size={28} className='mr-2'/></li>
+            </div>
+
+            {
+                isClicked && (<Cart isClicked={isClicked} />)
+            }
+
+            {
+                favouriteClicked && (<Favourite favouriteClicked={favouriteClicked} />)
+            }
         </ul>
 
     </div>

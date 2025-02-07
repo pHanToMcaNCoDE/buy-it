@@ -1,12 +1,17 @@
 import React, { useState } from 'react'
 // import tech from '../../../public/assets/tech/5.jpg'
-import {RiHeart2Line} from 'react-icons/ri'
+import {RiHeart2Fill} from 'react-icons/ri'
 import {AiOutlineStar} from 'react-icons/ai'
 import {LuFilter} from 'react-icons/lu'
 import {card} from '../../Data/Data'
+import { useDispatch } from 'react-redux'
+import { addToCart, addToFavourite } from '../../app/feature/cart'
+import useLocalStorage from 'use-local-storage'
 
 const Card = () => {
-const [food, setFood] = useState(card)
+    const [food, setFood] = useState(card)
+    const [favIds, setFavIds] = useLocalStorage('Clicked Favourite', [])
+    const dispatch = useDispatch()
 
     const filterCategory = (category) => {
         setFood(
@@ -15,6 +20,18 @@ const [food, setFood] = useState(card)
             })
         )
     }
+
+    const handleFavourite = (itemId) => {
+    setFavIds((prev) => {
+        if (prev.includes(itemId)) {
+            return prev.filter(id => id !== itemId);
+        } else {
+            return [...prev, itemId];
+        }
+    });
+};
+
+
 
 
   return (
@@ -51,7 +68,10 @@ const [food, setFood] = useState(card)
 
                                 <div className='relative'>
                                     <img className='w-[3125%] max-w-[100%]  h-[300px] object-cover' src={item.image} alt=''></img>
-                                    <RiHeart2Line className='absolute top-1 right-2 bg-white text-black p-1 cursor-pointer rounded-full' size={30}/>
+                                    <RiHeart2Fill onClick={() => {
+                                        dispatch(addToFavourite(item))
+                                        handleFavourite(item.id)                                    
+                                    }} className={`absolute top-1 right-2 bg-white ${favIds.includes(item.id) ? 'text-red-500' : 'text-black'} p-1 cursor-pointer duration-200 rounded-full`} size={30}/>
                                 </div>
 
                                 <div className='p-2 flex items-center justify-between'>
@@ -63,7 +83,7 @@ const [food, setFood] = useState(card)
 
                                 <p className='p-2 pt-2 flex items-center'><AiOutlineStar size={23} className='ml-1 text-green-500'/><AiOutlineStar size={23} className='ml-1 text-green-500'/><AiOutlineStar size={23} className='ml-1 text-green-500'/><AiOutlineStar size={23} className='ml-1 text-green-500'/><AiOutlineStar size={23} className='ml-1 text-green-500'/><span className='text-[.7rem] text-gray-400'>({item.count})</span></p>
 
-                                <button className='text-[.9rem] font-mono m-2 mr-20 mb-2 w-[40%] my-2 px-3 py-3 rounded-full border border-purple-600 text-purple-600 md:px-1 md:py-2 hover:bg-purple-600 duration-300 hover:text-white'>Add to Cart</button>
+                                <button onClick={() => dispatch(addToCart(item)) } className='text-[.9rem] font-mono m-2 mr-20 mb-2 w-[40%] my-2 px-3 py-3 rounded-full border border-purple-600 text-purple-600 md:px-1 md:py-2 hover:bg-purple-600 duration-300 hover:text-white'>Add to Cart</button>
 
                             </div>
                     ))
